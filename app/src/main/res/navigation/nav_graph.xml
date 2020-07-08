@@ -6,7 +6,7 @@
     app:startDestination="@id/dashboardFragment">
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="kupluk.smk.coding.DashboardFragment"
+        android:name="kupluk.smk.coding.fragment.DashboardFragment"
         android:label="DashboardFragment" >
         <action
             android:id="@+id/action_dashboardFragment_to_ayatFragment"
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/ayatFragment"
-        android:name="kupluk.smk.coding.StatistikFragment"
+        android:name="kupluk.smk.coding.fragment.StatistikFragment"
         android:label="fragment_ayat"
         tools:layout="@layout/fragment_statistik" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/kiblatFragment"
-        android:name="kupluk.smk.coding.KiblatFragment"
+        android:name="kupluk.smk.coding.fragment.KiblatFragment"
         android:label="fragment_kiblat"
         tools:layout="@layout/fragment_kiblat" >
         <action

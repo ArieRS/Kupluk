@@ -52,6 +52,10 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha04'
     // CircleImageView
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    // Retrofit Converter Gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

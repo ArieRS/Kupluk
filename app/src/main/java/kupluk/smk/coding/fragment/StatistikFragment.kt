@@ -1,10 +1,11 @@
-package kupluk.smk.coding
+package kupluk.smk.coding.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kupluk.smk.coding.R
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
