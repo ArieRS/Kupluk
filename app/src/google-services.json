@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "770196763440",
+    "firebase_url": "https://kupluk-da33c.firebaseio.com",
+    "project_id": "kupluk-da33c",
+    "storage_bucket": "kupluk-da33c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770196763440:android:9937b6242833df03c04ef5",
+        "android_client_info": {
+          "package_name": "kupluk.smk.coding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770196763440-7g3hbpekdabrk3qjs8vm2d77e8380eep.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kupluk.smk.coding",
+            "certificate_hash": "e10a73e19278664049ecdca1d3038c4aad4d17f9"
+          }
+        },
+        {
+          "client_id": "770196763440-sgeg0pgdpvpaapev7i2qmg68df6to27t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArnjCZGn9xr0fl9z-w7KQR7XI-bEVrVQA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770196763440-sgeg0pgdpvpaapev7i2qmg68df6to27t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

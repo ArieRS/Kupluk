@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 30
@@ -56,6 +57,13 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     // Retrofit Converter Gson
     implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+    // GoogleAuth
+    implementation 'com.google.firebase:firebase-auth:19.3.1'
+    implementation 'com.google.android.gms:play-services-auth:18.0.0'
+    // Firebase Database
+    implementation 'com.google.firebase:firebase-database:19.3.1'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
 
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

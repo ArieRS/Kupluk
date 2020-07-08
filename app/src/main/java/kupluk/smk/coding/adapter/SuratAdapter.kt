@@ -15,7 +15,7 @@ class SuratAdapter internal constructor(private val surat: ArrayList<Surat>) :
     RecyclerView.Adapter<SuratAdapter.SuratHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SuratHolder {
         return SuratHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.surat_item, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_surat, parent, false)
         )
     }
 

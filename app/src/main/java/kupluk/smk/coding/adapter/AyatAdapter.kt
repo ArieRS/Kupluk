@@ -14,7 +14,7 @@ class AyatAdapter internal constructor(private val ayat: ArrayList<Ayat>) :
     RecyclerView.Adapter<AyatAdapter.AyatHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AyatHolder {
         return AyatHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.ayat_item, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_ayat, parent, false)
         )
     }
 

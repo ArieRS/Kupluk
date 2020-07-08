@@ -3,7 +3,7 @@ package kupluk.smk.coding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import kupluk.smk.coding.fragment.AboutFragment
+import kupluk.smk.coding.fragment.NewsFragment
 import kupluk.smk.coding.fragment.DashboardFragment
 import kupluk.smk.coding.fragment.KiblatFragment
 import kupluk.smk.coding.fragment.StatistikFragment
@@ -15,7 +15,7 @@ class ViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             0 -> return DashboardFragment()
             1 -> return KiblatFragment()
             2 -> return StatistikFragment()
-            3 -> return AboutFragment()
+            3 -> return NewsFragment()
             else -> return DashboardFragment()
         }
     }

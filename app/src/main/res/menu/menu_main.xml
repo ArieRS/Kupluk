@@ -20,8 +20,8 @@
         android:iconTint="@color/colorPrimary"/>
 
     <item
-        android:id="@+id/about"
+        android:id="@+id/news"
         android:icon="@drawable/ic_person"
-        android:title="Logger"
+        android:title="News"
         android:iconTint="@color/colorPrimary"/>
 </menu>
