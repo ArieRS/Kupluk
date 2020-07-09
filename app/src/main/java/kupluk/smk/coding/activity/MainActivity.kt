@@ -39,6 +39,10 @@ class MainActivity : AppCompatActivity() {
                         viewPager.currentItem = 3
                         supportActionBar?.title = "News"
                     }
+                    R.id.tasbih -> {
+                        viewPager.currentItem = 4
+                        supportActionBar?.title = "Tasbih"
+                    }
                 }
             }
         })

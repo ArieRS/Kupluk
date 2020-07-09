@@ -16,10 +16,11 @@ class ViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             1 -> return KiblatFragment()
             2 -> return StatistikFragment()
             3 -> return NewsFragment()
+            4 -> return TasbihFragment()
             else -> return DashboardFragment()
         }
     }
 
-    override fun getCount(): Int = 4
+    override fun getCount(): Int = 5
 
 }
