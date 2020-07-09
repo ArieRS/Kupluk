@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kupluk.smk.coding">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,16 +11,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".activity.Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.LoginActivity">
+        </activity>
+        <activity android:name=".activity.AddNewsActivity" />
+        <activity android:name=".activity.AyatActivity" />
+        <activity android:name=".activity.KalenderActivity" />
+        <activity android:name=".activity.TasbihActivity" />
+        <activity
+            android:name=".activity.AlQuranActivity"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.JadwalSholatActivity"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

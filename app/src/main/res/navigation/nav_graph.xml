@@ -3,26 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
-
+    app:startDestination="@id/dashboardFragment">
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="kupluk.smk.coding.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/dashboardFragment"
+        android:name="kupluk.smk.coding.fragment.DashboardFragment"
+        android:label="DashboardFragment" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_dashboardFragment_to_ayatFragment"
+            app:destination="@id/ayatFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_kiblatFragment"
+            app:destination="@id/kiblatFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="kupluk.smk.coding.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/ayatFragment"
+        android:name="kupluk.smk.coding.fragment.StatistikFragment"
+        android:label="fragment_ayat"
+        tools:layout="@layout/fragment_statistik" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_ayatFragment_to_kiblatFragment"
+            app:destination="@id/kiblatFragment" />
+        <action
+            android:id="@+id/action_ayatFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kiblatFragment"
+        android:name="kupluk.smk.coding.fragment.KiblatFragment"
+        android:label="fragment_kiblat"
+        tools:layout="@layout/fragment_kiblat" >
+        <action
+            android:id="@+id/action_kiblatFragment_to_ayatFragment"
+            app:destination="@id/ayatFragment" />
+        <action
+            android:id="@+id/action_kiblatFragment_self"
+            app:destination="@id/dashboardFragment" />
     </fragment>
 </navigation>
