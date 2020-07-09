@@ -12,6 +12,5 @@ class JadwalSholatActivity : AppCompatActivity() {
 //        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
 //        supportActionBar?.title = Html.fromHtml("<font color=#44C121>${getString(R.string.app_name)}</font>")
         supportActionBar?.setDefaultDisplayHomeAsUpEnabled(true)
-
     }
 }
