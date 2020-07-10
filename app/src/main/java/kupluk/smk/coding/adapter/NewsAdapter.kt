@@ -11,9 +11,14 @@ import com.bumptech.glide.Glide
 import kupluk.smk.coding.R
 import kupluk.smk.coding.data.News
 
-class NewsAdapter internal constructor(private val news: ArrayList<News>, private val context: Context): RecyclerView.Adapter<NewsAdapter.NewsHolder>(){
+class NewsAdapter internal constructor(
+    private val news: ArrayList<News>,
+    private val context: Context
+) : RecyclerView.Adapter<NewsAdapter.NewsHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsAdapter.NewsHolder {
-        return NewsHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_news, parent, false))
+        return NewsHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.item_news, parent, false)
+        )
     }
 
     override fun getItemCount(): Int = news.size
@@ -22,7 +27,7 @@ class NewsAdapter internal constructor(private val news: ArrayList<News>, privat
         holder.bind(news[position])
     }
 
-    inner class NewsHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    inner class NewsHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgPhoto: ImageView = itemView.findViewById(R.id.img_news)
         val tvTitle: TextView = itemView.findViewById(R.id.tv_news_title)
         val tvDescription: TextView = itemView.findViewById(R.id.tv_news_description)

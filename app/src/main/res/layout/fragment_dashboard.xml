@@ -8,11 +8,16 @@
         android:id="@+id/card"
         layout="@layout/content_card" />
 
-    <include
-        layout="@layout/content_main"
-        android:layout_below="@+id/card"
-        android:layout_height="wrap_content"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_margin="10dp" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card">
+        <include
+            layout="@layout/content_main"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp" />
+
+    </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>
