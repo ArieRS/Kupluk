@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_news.*
 import kupluk.smk.coding.R
-import kupluk.smk.coding.activity.AddNewsActivity
+import kupluk.smk.coding.activity.NewsActivity
 import kupluk.smk.coding.adapter.NewsAdapter
 import kupluk.smk.coding.data.News
 
@@ -36,6 +36,7 @@ class NewsFragment : Fragment() {
                 list = java.util.ArrayList<News>()
                 for (postSnapshot in snapshot.children) {
                     val upload = postSnapshot.getValue(News::class.java)
+                    upload?.key = postSnapshot.key.toString()
                     list.add(upload!!)
                 }
                 rv_news.apply {
@@ -45,11 +46,8 @@ class NewsFragment : Fragment() {
             }
         })
 
-
         fab_add_news.setOnClickListener {
-            startActivity(Intent(view.context, AddNewsActivity::class.java))
+            startActivity(Intent(view.context, NewsActivity::class.java))
         }
-
-
     }
 }

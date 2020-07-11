@@ -20,7 +20,7 @@
         </activity>
         <activity android:name=".activity.LoginActivity">
         </activity>
-        <activity android:name=".activity.AddNewsActivity" />
+        <activity android:name=".activity.NewsActivity" />
         <activity android:name=".activity.AyatActivity" />
         <activity android:name=".activity.KalenderActivity" />
         <activity android:name=".activity.TasbihActivity" />

@@ -1,14 +1,19 @@
 package kupluk.smk.coding.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.firebase.database.FirebaseDatabase
 import kupluk.smk.coding.R
+import kupluk.smk.coding.activity.NewsActivity
 import kupluk.smk.coding.data.News
 
 class NewsAdapter internal constructor(
@@ -25,6 +30,17 @@ class NewsAdapter internal constructor(
 
     override fun onBindViewHolder(holder: NewsAdapter.NewsHolder, position: Int) {
         holder.bind(news[position])
+        holder.itemView.setOnClickListener {
+            val items = arrayOf("Update", "Delete")
+            MaterialAlertDialogBuilder(holder.itemView.context)
+                .setTitle(news[position].title)
+                .setItems(items) {dialog, i ->
+                    when (i) {
+                        0 -> updateNews(news[position])
+                        1 -> deleteNews(news[position])
+                    }
+                }.show()
+        }
     }
 
     inner class NewsHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -38,5 +54,25 @@ class NewsAdapter internal constructor(
             tvTitle.text = news.title
             tvDescription.text = news.description
         }
+    }
+
+    private fun updateNews(news: News) {
+        val intent = Intent(context, NewsActivity::class.java)
+        intent.putExtra("EXTRA_TITLE", news.title)
+        intent.putExtra("EXTRA_DESCRIPTION", news.description)
+        intent.putExtra("EXTRA_IMAGE", news.image)
+        intent.putExtra("EXTRA_KEY", news.key)
+        intent.putExtra("EXTRA_UPDATE", 1)
+        context.startActivity(intent)
+    }
+
+    private fun deleteNews(news: News) {
+        val ref = FirebaseDatabase.getInstance().reference
+        ref.child("uploads")
+            .child(news.key)
+            .removeValue()
+            .addOnSuccessListener {
+                Toast.makeText(context, "Berhasil Hapus", Toast.LENGTH_SHORT).show()
+            }
     }
 }

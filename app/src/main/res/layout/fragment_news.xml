@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     tools:context=".fragment.NewsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -19,7 +18,7 @@
         android:layout_height="100dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="15dp"
+        android:layout_margin="10dp"
         android:background="@color/colorPrimary"
         android:src="@drawable/ic_baseline_add_24" />
 
