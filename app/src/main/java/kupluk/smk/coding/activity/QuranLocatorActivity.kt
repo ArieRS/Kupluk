@@ -24,7 +24,6 @@ class QuranLocatorActivity : AppCompatActivity() , View.OnClickListener{
         auth = FirebaseAuth.getInstance()
         if (auth!!.currentUser == null) {
         } else {
-
             intent = Intent(applicationContext,
                 QtlActivity::class.java)
             startActivity(intent)
@@ -39,7 +38,6 @@ class QuranLocatorActivity : AppCompatActivity() , View.OnClickListener{
     ) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == RC_SIGN_IN) {
-            //Jika Berhasil masuk
             if (resultCode == Activity.RESULT_OK) {
                 Toast.makeText(this, "Login Berhasil",
                     Toast.LENGTH_SHORT).show()
@@ -54,6 +52,7 @@ class QuranLocatorActivity : AppCompatActivity() , View.OnClickListener{
             }
         }
     }
+
     override fun onClick(v: View?) {
         // Statement program untuk login/masuk
         startActivityForResult(
