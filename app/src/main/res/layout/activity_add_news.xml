@@ -4,15 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".activity.AddNewsActivity">
 
+
+    <ImageView
+        android:id="@+id/view_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"/>
+
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:layout_height="wrap_content">
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_news_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Title" />
@@ -20,14 +29,22 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:layout_height="wrap_content">
+
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_news_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Description" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_choose_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose File" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_submit"

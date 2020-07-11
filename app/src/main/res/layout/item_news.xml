@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
-    app:cardElevation="5dp"
-    app:cardCornerRadius="8dp"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,8 +18,8 @@
             android:id="@+id/img_news"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@android:color/darker_gray"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@android:color/darker_gray" />
 
         <TextView
             android:id="@+id/tv_news_title"
@@ -28,12 +28,12 @@
             android:text="Judul"
             android:textSize="18sp"
             android:textStyle="bold" />
-        
+
         <TextView
             android:id="@+id/tv_news_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Description"
-            android:maxLines="2" />
+            android:maxLines="2"
+            android:text="Description" />
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

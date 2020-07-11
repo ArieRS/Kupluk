@@ -104,5 +104,27 @@
                     android:text="Tasbih" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/CardStyle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_quran" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Al Quran Locator" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
     </GridLayout>
 </LinearLayout>
