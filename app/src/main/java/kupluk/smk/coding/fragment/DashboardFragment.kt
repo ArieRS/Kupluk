@@ -28,7 +28,7 @@ class DashboardFragment : Fragment() {
         val grid = view.findViewById(R.id.grid) as GridLayout
         val act = arrayOf(
             JadwalSholatActivity::class.java, AlQuranActivity::class.java, KalenderActivity::class.java,
-            TasbihActivity::class.java, QuranLocatorActivity::class.java)
+            TasbihActivity::class.java, QtlActivity::class.java)
         for (i in 0 until grid.childCount) {
             val container = grid.getChildAt(i) as MaterialCardView
             container.setOnClickListener {
