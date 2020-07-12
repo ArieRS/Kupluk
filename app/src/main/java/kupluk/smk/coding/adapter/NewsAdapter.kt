@@ -14,6 +14,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.database.FirebaseDatabase
 import kupluk.smk.coding.R
 import kupluk.smk.coding.activity.NewsActivity
+import kupluk.smk.coding.activity.NewsDetailActivity
 import kupluk.smk.coding.data.News
 
 class NewsAdapter internal constructor(
@@ -31,13 +32,14 @@ class NewsAdapter internal constructor(
     override fun onBindViewHolder(holder: NewsAdapter.NewsHolder, position: Int) {
         holder.bind(news[position])
         holder.itemView.setOnClickListener {
-            val items = arrayOf("Update", "Delete")
+            val items = arrayOf("Update", "Delete", "Detail")
             MaterialAlertDialogBuilder(holder.itemView.context)
                 .setTitle(news[position].title)
                 .setItems(items) {dialog, i ->
                     when (i) {
                         0 -> updateNews(news[position])
                         1 -> deleteNews(news[position])
+                        2 -> showDetails(news[position])
                     }
                 }.show()
         }
@@ -74,5 +76,13 @@ class NewsAdapter internal constructor(
             .addOnSuccessListener {
                 Toast.makeText(context, "Berhasil Hapus", Toast.LENGTH_SHORT).show()
             }
+    }
+
+    private fun showDetails(news: News) {
+        val intent = Intent(context, NewsDetailActivity::class.java)
+        intent.putExtra("EXTRA_TITLE", news.title)
+        intent.putExtra("EXTRA_DESCRIPTION", news.description)
+        intent.putExtra("EXTRA_IMAGE", news.image)
+        context.startActivity(intent)
     }
 }

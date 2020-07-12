@@ -6,5 +6,5 @@ data class News(
     var image: String,
     var key: String
 ) {
-    constructor() : this("","","", "")
+    constructor() : this("", "", "", "")
 }

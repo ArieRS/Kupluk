@@ -27,13 +27,17 @@
             android:layout_height="wrap_content"
             android:text="Judul"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:padding="4dp" />
 
         <TextView
             android:id="@+id/tv_news_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="2"
-            android:text="Description" />
+            android:text="Description"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"/>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
