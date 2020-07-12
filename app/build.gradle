@@ -70,8 +70,10 @@ dependencies {
 
     implementation 'com.google.firebase:firebase-storage:19.1.1'
     implementation 'com.google.firebase:firebase-storage-ktx:19.1.1'
+    implementation 'androidx.room:room-runtime:2.2.5'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
 
 }
