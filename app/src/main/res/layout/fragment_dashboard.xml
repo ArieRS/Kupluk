@@ -4,9 +4,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
-        layout="@layout/content_card" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="10dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kota Malang"
+                android:textColor="@color/colorPrimary"
+                android:drawableStart="@drawable/ic_baseline_location_on_24" />
+            <TextView
+                android:id="@+id/tv_sholat1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dzuhur"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_below="@+id/tv_location"/>
+            <TextView
+                android:id="@+id/waktu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11.34"
+                android:layout_below="@+id/tv_sholat1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_nabawi_mosque"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
