@@ -31,7 +31,7 @@
                 android:id="@+id/tv_sholat1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dzuhur"
+                android:text="Sholat"
                 android:textColor="@color/colorPrimary"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -40,7 +40,7 @@
                 android:id="@+id/waktu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11.34"
+                android:text="00.00"
                 android:layout_below="@+id/tv_sholat1"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
@@ -60,8 +60,9 @@
             layout="@layout/content_main"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_margin="10dp" />
-
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
     </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>

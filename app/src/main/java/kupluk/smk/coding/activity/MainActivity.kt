@@ -25,22 +25,22 @@ class MainActivity : AppCompatActivity() {
                         viewPager.currentItem = 0
                         supportActionBar?.title = "Dashboard"
                     }
-                    R.id.kiblat -> {
-                        viewPager.currentItem = 1
-                        supportActionBar?.title = "Kiblat"
-                    }
-                    R.id.grafik -> {
-                        viewPager.currentItem = 2
-                        supportActionBar?.title = "Grafik"
-                    }
+//                    R.id.kiblat -> {
+//                        viewPager.currentItem = 1
+//                        supportActionBar?.title = "Kiblat"
+//                    }
+//                    R.id.grafik -> {
+//                        viewPager.currentItem = 2
+//                        supportActionBar?.title = "Grafik"
+//                    }
                     R.id.news -> {
-                        viewPager.currentItem = 3
+                        viewPager.currentItem = 2
                         supportActionBar?.title = "News"
                     }
-                    R.id.tasbih -> {
-                        viewPager.currentItem = 4
-                        supportActionBar?.title = "Tasbih"
-                    }
+//                    R.id.tasbih -> {
+//                        viewPager.currentItem = 3
+//                        supportActionBar?.title = "Tasbih"
+//                    }
                 }
             }
         })

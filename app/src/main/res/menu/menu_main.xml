@@ -7,26 +7,26 @@
         android:checked="true"
         android:iconTint="@color/colorPrimary"/>
 
-    <item
-        android:id="@+id/kiblat"
-        android:icon="@drawable/ic_explore_24px"
-        android:title="Kiblat"
-        android:iconTint="@color/colorPrimary"/>
+<!--    <item-->
+<!--        android:id="@+id/kiblat"-->
+<!--        android:icon="@drawable/ic_explore_24px"-->
+<!--        android:title="Kiblat"-->
+<!--        android:iconTint="@color/colorPrimary"/>-->
 
-    <item
-        android:id="@+id/grafik"
-        android:icon="@drawable/ic_bar"
-        android:title="Statistik"
-        android:iconTint="@color/colorPrimary"/>
+<!--    <item-->
+<!--        android:id="@+id/grafik"-->
+<!--        android:icon="@drawable/ic_bar"-->
+<!--        android:title="Statistik"-->
+<!--        android:iconTint="@color/colorPrimary"/>-->
 
     <item
         android:id="@+id/news"
-        android:icon="@drawable/ic_person"
+        android:icon="@drawable/ic_baseline_cast_24"
         android:title="News"
         android:iconTint="@color/colorPrimary"/>
-    <item
-        android:id="@+id/tasbih"
-        android:icon="@drawable/ic_beads"
-        android:title="Tasbih"
-        android:iconTint="@color/colorPrimary"/>
+<!--    <item-->
+<!--        android:id="@+id/tasbih"-->
+<!--        android:icon="@drawable/ic_beads"-->
+<!--        android:title="Tasbih"-->
+<!--        android:iconTint="@color/colorPrimary"/>-->
 </menu>

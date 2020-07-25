@@ -3,6 +3,7 @@ package kupluk.smk.coding.fragment
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,8 +11,11 @@ import android.widget.GridLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.card.MaterialCardView
 import kotlinx.android.synthetic.main.fragment_dashboard.*
-import kupluk.smk.coding.*
-import kupluk.smk.coding.activity.*
+import kupluk.smk.coding.R
+import kupluk.smk.coding.activity.AlQuranActivity
+import kupluk.smk.coding.activity.JadwalSholatActivity
+import kupluk.smk.coding.activity.QuranLocatorActivity
+import kupluk.smk.coding.activity.TasbihActivity
 import kupluk.smk.coding.api.Api
 import kupluk.smk.coding.data.jadwal.Data
 import kupluk.smk.coding.data.jadwal.jadwal
@@ -43,9 +47,7 @@ class DashboardFragment : Fragment() {
         })
 
         val grid = view.findViewById(R.id.grid) as GridLayout
-        val act = arrayOf(
-            JadwalSholatActivity::class.java, AlQuranActivity::class.java, KalenderActivity::class.java,
-            TasbihActivity::class.java, QuranLocatorActivity::class.java)
+        val act = arrayOf(JadwalSholatActivity::class.java, AlQuranActivity::class.java, QuranLocatorActivity::class.java, TasbihActivity::class.java)
         for (i in 0 until grid.childCount) {
             val container = grid.getChildAt(i) as MaterialCardView
             container.setOnClickListener {
@@ -53,56 +55,59 @@ class DashboardFragment : Fragment() {
             }
         }
     }
+
     private fun updateTime(jadwalShalat: Data?) {
         val currentDate = Calendar.getInstance()
-        val eventDate = Calendar.getInstance()
-        var jamSkearang = currentDate[Calendar.HOUR]
-        if (jamSkearang < 4){
-            waktu.text = jadwalShalat?.subuh
-            tv_sholat1.text = "Menjelang Subuh"
-        }else if(jamSkearang == 4){
-            waktu.text = jadwalShalat?.subuh
-            tv_sholat1.text = "Subuh"
-        }else if(jamSkearang < 6){
-            waktu.text = jadwalShalat?.dhuha
-            tv_sholat1.text = "Menjelang Dhuha"
-        }else if(jamSkearang == 6){
-            waktu.text = jadwalShalat?.dhuha
-            tv_sholat1.text = "Dhuha"
-        }else if(jamSkearang < 9){
-            waktu.text = jadwalShalat?.dhuha
-            tv_sholat1.text = "Dhuha"
-        }else if(jamSkearang < 10){
-            waktu.text = jadwalShalat?.dzuhur
-            tv_sholat1.text = "Menjelang Dzuhur"
-        }else if(jamSkearang == 11){
-            waktu.text = jadwalShalat?.dzuhur
-            tv_sholat1.text = "Dzuhur"
-        }else if(jamSkearang < 15){
-            waktu.text = jadwalShalat?.ashar
-            tv_sholat1.text = "Menjelang Ashar"
-        }else if(jamSkearang == 15){
-            waktu.text = jadwalShalat?.ashar
-            tv_sholat1.text = "Ashar"
-        }else if(jamSkearang < 16){
-            waktu.text = jadwalShalat?.maghrib
-            tv_sholat1.text = "Menjelang Maghrib"
-        }else if(jamSkearang == 17){
-            waktu.text = jadwalShalat?.maghrib
-            tv_sholat1.text = "Maghrib"
-        }else if(jamSkearang == 18){
-            waktu.text = jadwalShalat?.isya
-            tv_sholat1.text = "Isya"
-        }else if(jamSkearang > 18){
-            waktu.text = jadwalShalat?.isya
-            tv_sholat1.text = "Isya"
-        }else{
-            waktu.text = "EROR"
+        val jamSkearang = currentDate[Calendar.HOUR]
+
+        if (waktu.text == null) {
+            waktu.text = ""
+        } else {
+            if (jamSkearang < 4) {
+                waktu.text = jadwalShalat?.subuh
+                tv_sholat1.text = "Menjelang Subuh"
+            } else if (jamSkearang == 4) {
+                waktu.text = jadwalShalat?.subuh
+                tv_sholat1.text = "Subuh"
+            } else if (jamSkearang < 6) {
+                waktu.text = jadwalShalat?.dhuha
+                tv_sholat1.text = "Menjelang Dhuha"
+            } else if (jamSkearang == 6) {
+                waktu.text = jadwalShalat?.dhuha
+                tv_sholat1.text = "Dhuha"
+            } else if (jamSkearang < 9) {
+                waktu.text = jadwalShalat?.dhuha
+                tv_sholat1.text = "Dhuha"
+            } else if (jamSkearang < 10) {
+                waktu.text = jadwalShalat?.dzuhur
+                tv_sholat1.text = "Menjelang Dzuhur"
+            } else if (jamSkearang == 11) {
+                waktu.text = jadwalShalat?.dzuhur
+                tv_sholat1.text = "Dzuhur"
+            } else if (jamSkearang < 15) {
+                waktu.text = jadwalShalat?.ashar
+                tv_sholat1.text = "Menjelang Ashar"
+            } else if (jamSkearang == 15) {
+                waktu.text = jadwalShalat?.ashar
+                tv_sholat1.text = "Ashar"
+            } else if (jamSkearang < 16) {
+                waktu.text = jadwalShalat?.maghrib
+                tv_sholat1.text = "Menjelang Maghrib"
+            } else if (jamSkearang == 17) {
+                waktu.text = jadwalShalat?.maghrib
+                tv_sholat1.text = "Maghrib"
+            } else if (jamSkearang == 18) {
+                waktu.text = jadwalShalat?.isya
+                tv_sholat1.text = "Isya"
+            } else if (jamSkearang > 18) {
+                waktu.text = jadwalShalat?.isya
+                tv_sholat1.text = "Isya"
+            } else {
+                waktu.text = "EROR"
+            }
         }
-
-
-
     }
+
     private fun fetchJson() {
         val current = Calendar.getInstance().time
         val formatter = SimpleDateFormat("yyyy-MM-dd")
@@ -117,9 +122,6 @@ class DashboardFragment : Fragment() {
             override fun onResponse(call: Call<jadwal>, response: Response<jadwal>) {
                 response.body()?.jadwal?.data.let { updateTime(it) }
             }
-
         })
     }
-
-
 }

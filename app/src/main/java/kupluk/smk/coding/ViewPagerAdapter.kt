@@ -13,14 +13,11 @@ class ViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getItem(position: Int): Fragment {
         when (position) {
             0 -> return DashboardFragment()
-            1 -> return KiblatFragment()
-            2 -> return StatistikFragment()
-            3 -> return NewsFragment()
-            4 -> return TasbihFragment()
+            1-> return NewsFragment()
             else -> return DashboardFragment()
         }
     }
 
-    override fun getCount(): Int = 5
+    override fun getCount(): Int = 2
 
 }

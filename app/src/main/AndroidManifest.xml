@@ -11,10 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.NewsDetailActivity"></activity>
+        <activity android:name=".activity.NewsDetailActivity"/>
         <activity android:name=".activity.AddNewQtlActivity" />
-        <activity android:name=".activity.QtlActivity" />
-        <activity android:name=".activity.Splashscreen">
+        <activity android:name=".activity.QtlActivity"
+            android:parentActivityName=".activity.MainActivity"/>
+        <activity android:name=".activity.Splashscreen"
+            android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,8 +27,10 @@
         <activity android:name=".activity.NewsActivity" />
         <activity android:name=".activity.AyatActivity" />
         <activity android:name=".activity.KalenderActivity" />
-        <activity android:name=".activity.TasbihActivity" />
-        <activity android:name=".activity.QuranLocatorActivity" />
+        <activity android:name=".activity.TasbihActivity"
+            android:parentActivityName=".activity.MainActivity"/>
+        <activity android:name=".activity.QuranLocatorActivity"
+            android:parentActivityName=".activity.QtlActivity"/>
         <activity
             android:name=".activity.AlQuranActivity"
             android:parentActivityName=".activity.MainActivity" />

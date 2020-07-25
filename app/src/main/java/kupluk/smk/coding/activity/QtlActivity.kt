@@ -22,6 +22,7 @@ class QtlActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_qtl)
+        supportActionBar?.setDefaultDisplayHomeAsUpEnabled(true)
         ref = FirebaseDatabase.getInstance().getReference()
         getData()
         fab_add_qtl.setOnClickListener {

@@ -9,7 +9,7 @@ class TasbihActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_tasbih)
-
+        supportActionBar?.setDefaultDisplayHomeAsUpEnabled(true)
         var awal = 0
 
         btnplus.setOnClickListener {
@@ -19,7 +19,7 @@ class TasbihActivity : AppCompatActivity() {
         }
         btnReset.setOnClickListener {
 
-            if ( awal == 0 ) {
+            if (awal == 0) {
                 textView.setText(awal.toString())
             } else {
                 awal = 0

@@ -19,6 +19,7 @@ class QuranLocatorActivity : AppCompatActivity() , View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quran_locator)
+        supportActionBar?.setDefaultDisplayHomeAsUpEnabled(true)
         progress.visibility = View.GONE
         btn_login.setOnClickListener(this)
         auth = FirebaseAuth.getInstance()

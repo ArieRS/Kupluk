@@ -22,15 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="30dp">
-            <TextView
-                android:id="@+id/tv_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:text="LOGIN"
-                android:textSize="35sp"
-                android:textStyle="bold"
-                android:textColor="@color/colorPrimary"/>
 
             <com.google.android.gms.common.SignInButton
                 android:id="@+id/btn_login_google"
